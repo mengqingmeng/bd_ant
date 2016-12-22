@@ -16,7 +16,7 @@ threads = 100
 step = count / threads
 for i in range(0, threads):
     #print(int(i*step+1),int((i+1)*step))
-    t = threading.Thread(target=request.thread, args=(int(i*step+1),int((i+1)*step),"T" + str(i+1)))
+    t = threading.Thread(target=request.thread, args=(int(i*step+1),int((i+1)*step)))
     t.start()
     ts.append(t)
 

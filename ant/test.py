@@ -24,7 +24,6 @@ for page in range(0,10):
         soup = BeautifulSoup(data, "lxml")
 
         for result in soup.find_all("div",{"class":"result"}):#查找class="result"的div,保存结果
-            cursor.execute('insert into business_product_baidu_info (pid,pname,info) values (%s,%s,%s)',(str(5),str(productName),str(result)))
-            conn.commit()
+            print(result)
 
     print("succ--productName:%s,Page:%d" ,productName,page+1)
